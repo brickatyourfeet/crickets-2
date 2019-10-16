@@ -13,6 +13,7 @@
 		A8360D7B234D909D00AF0317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8360D79234D909D00AF0317 /* Main.storyboard */; };
 		A8360D7D234D909E00AF0317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8360D7C234D909E00AF0317 /* Assets.xcassets */; };
 		A8360D80234D909E00AF0317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8360D7E234D909E00AF0317 /* LaunchScreen.storyboard */; };
+		A8422822235667FB00132782 /* chirp.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8422821235667FB00132782 /* chirp.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A8360D7C234D909E00AF0317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8360D7F234D909E00AF0317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8360D81234D909E00AF0317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8422821235667FB00132782 /* chirp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = chirp.wav; path = ../../Desktop/chirp.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		A8360D72234D909D00AF0317 /* Crickets-2 */ = {
 			isa = PBXGroup;
 			children = (
+				A8422821235667FB00132782 /* chirp.wav */,
 				A8360D73234D909D00AF0317 /* AppDelegate.swift */,
 				A8360D75234D909D00AF0317 /* SceneDelegate.swift */,
 				A8360D77234D909D00AF0317 /* ViewController.swift */,
@@ -128,6 +131,7 @@
 				A8360D80234D909E00AF0317 /* LaunchScreen.storyboard in Resources */,
 				A8360D7D234D909E00AF0317 /* Assets.xcassets in Resources */,
 				A8360D7B234D909D00AF0317 /* Main.storyboard in Resources */,
+				A8422822235667FB00132782 /* chirp.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
