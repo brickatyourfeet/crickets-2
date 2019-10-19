@@ -8,11 +8,18 @@
 
 import UIKit
 import AVFoundation
+import Speech
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     let url = URL(fileURLWithPath: Bundle.main.path(forResource: "chirp.wav", ofType: nil)!)
     var player: AVAudioPlayer?
+    
+    let audioEngine = AVAudioEngine()
+    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
+    let request = SFSpeechRecognitionRequest()
+    var recognitionTask: SFSpeechRecognitionTask?
+    
     
 
     override func viewDidLoad() {
@@ -29,21 +36,35 @@ class ViewController: UIViewController {
     
     @IBAction func chirpButtonClicked(_ sender: Any) {
         playSound()
+        requestSpeechAuth()
     }
-    
 
-    
-    
     
     func playSound() {
 
         if player?.isPlaying == true {
-            print("farts")
+            print("player is playing - pausing..")
             player?.pause()
         } else {
             player?.numberOfLoops = 1000
             player?.play()
         }
+        
+    }
+    
+    func requestSpeechAuth() {
+        SFSpeechRecognizer.requestAuthorization { [unowned self] authStatus in
+            DispatchQueue.main.async {
+                if authStatus == .authorized {
+                    print("authorization complete")
+                } else {
+                    print("authorization declined")
+                }
+            }
+        }
+    }
+    
+    func checkForAudioTranscription(){
         
     }
 

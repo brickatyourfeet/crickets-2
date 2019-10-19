@@ -14,6 +14,10 @@
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Enable speech for detecting awkard silence.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Enable microphone for detecting awkard silence.</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
