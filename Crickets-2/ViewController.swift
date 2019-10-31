@@ -94,9 +94,10 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     func recSpeech(){
         //_ = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.timerFunction), userInfo: nil, repeats: false)
         
+        //rewrite / refactor this function, create new rectask for each 5 seconds?
+        
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { result, error in
             if let newResult = result {
-                //assign temp string with timed function
                 
                 _ = newResult.bestTranscription.formattedString
                 
@@ -112,6 +113,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             } else if let error = error {
                 print(error)
             }
+
         })
         
         //right here should re-create a new variable after 5 seconds and send it to a check
